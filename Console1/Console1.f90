@@ -21,6 +21,7 @@
     use Grid_Mod
     use key_func
     use GUST
+    use fmatlab
     implicit none
 
     INTEGER :: i
@@ -184,5 +185,11 @@
     !* 开始测试阵风模块
     !!***************************************
     call generateGust()
+    
+    
+    !!**************************************
+    !* 开始测试 fortran产生数据 调用matlab进行绘图
+    !!*************************************** 
+    call generateDataForMatlab()
     end program Console1
 
