@@ -36,7 +36,7 @@
 		<File RelativePath=".\Ses.7.res\TYPE.F90"/>
 		<File RelativePath=".\Ses.7.res\TYPE_ACCESS.F90"/></Filter>
 		<Filter Name="functionSub">
-		<File RelativePath=".\Ses.8.res\Func.f90"/>
+		<File RelativePath=".\Ses.8.res\FuncPrint.f90"/>
 		<File RelativePath=".\Ses.8.res\func_name_arg.f90"/>
 		<File RelativePath=".\Ses.8.res\optional.f90"/>
 		<File RelativePath=".\Ses.8.res\passtype.f90"/>

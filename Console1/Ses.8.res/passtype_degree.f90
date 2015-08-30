@@ -2,7 +2,7 @@ Module typedef
   Implicit None
   Integer , parameter :: DP = Selected_Real_Kind( p = 9 )
   Type ST_Degree
-    Integer(Kind=2) :: d , m
+    Integer(Kind=2) :: d , m ! 设置整数精度 为2位 一定位数确定一定的范围
     real :: s    
   End Type ST_Degree
   

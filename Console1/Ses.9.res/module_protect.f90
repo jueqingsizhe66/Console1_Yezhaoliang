@@ -3,13 +3,16 @@ Module Grid_Mod
   Type ST_Info
     integer :: m , n
   End Type ST_Info
-  Type( ST_Info ) , protected     :: grd_stInfo
-  Real            , allocatable   :: grd_rData( : , : )
+  Type( ST_Info ) , protected     :: grd_stInfo  !!!只可读取 不可修改
+  Real            , allocatable   :: grd_rData( : , : ) !! 不定数组
   Character(len=512)              :: grd_cFilename
 
-contains
+    contains
 
-  Logical Function Grid_Alloc( x , y ) result( bAlloc )
+    !!**************************************
+    !* 返回是否赋值成功 logical value
+    !!***************************************
+  Logical Function Grid_Alloc( x , y ) result( bAlloc ) 
     Integer , Intent( IN ) :: x , y
     integer :: i
     bAlloc = .false.
@@ -29,7 +32,7 @@ contains
     end if
   End Function Grid_DeAlloc
 
-End Module Grid_Mod
+    End Module Grid_Mod
 
 !Program main
 !  use Grid_Mod
@@ -48,6 +51,9 @@ End Module Grid_Mod
 !  b = Grid_Dealloc()
 !End Program main
 
+    !!**************************************
+    !* 填充 grd_rData矩阵数值
+    !!***************************************
 Subroutine FillGrid()
   use Grid_Mod
   Implicit None

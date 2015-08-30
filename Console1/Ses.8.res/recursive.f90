@@ -1,7 +1,7 @@
 module def
   Integer , parameter :: DP = Selected_Real_Kind( p = 12 )
 end module def
-
+!! 进行新的模块添加
 !Program www_fcode_cn
 !  use def
 !  Implicit None

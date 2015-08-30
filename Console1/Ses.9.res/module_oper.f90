@@ -8,15 +8,7 @@ Module SecMod
   Interface Operator( - )
     Module Procedure SecDec_Us
   End Interface
-  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  !!Author : Ye Zhaoliang
-  !!Date   : 
-  !!Email  : zhaoturkkey@163.com
-  !!Version: V1.0
-  !!Purpose:
-  !!Input  :
-  !!Usage  :  
-  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+ 
 contains
 
   Integer(Kind=8) Function SecDec_uS( stSec1 , stSec2 )

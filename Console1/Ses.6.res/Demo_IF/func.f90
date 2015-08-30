@@ -1,4 +1,4 @@
-MODULE func
+MODULE key_func
     IMPLICIT NONE
 CONTAINS
     SUBROUTINE readcmd(keyword, pars)
@@ -51,4 +51,4 @@ CONTAINS
         END DO
 
     END FUNCTION
-END MODULE
+END MODULE key_func
