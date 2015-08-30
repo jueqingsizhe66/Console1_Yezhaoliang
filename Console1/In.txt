@@ -1,0 +1,11 @@
+&windTurbine
+winBlade=3
+Num=4
+NameOfBlade='hello'
+&END
+
+&windTurbine23
+winBlade1=345
+Num2=46
+NameOfBlade='hell34o'
+&END

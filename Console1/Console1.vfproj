@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Console Application" Version="11.0" ProjectIdGuid="{B8F9BC48-CE46-4954-8A4B-960D498DAEC4}">
+	<Platforms>
+		<Platform Name="Win32"/></Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration>
+		<Configuration Name="Release|Win32">
+				<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+				<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" SubSystem="subSystemConsole"/>
+				<Tool Name="VFResourceCompilerTool"/>
+				<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+				<Tool Name="VFCustomBuildTool"/>
+				<Tool Name="VFPreLinkEventTool"/>
+				<Tool Name="VFPreBuildEventTool"/>
+				<Tool Name="VFPostBuildEventTool"/>
+				<Tool Name="VFManifestTool" SuppressStartupBanner="true"/></Configuration></Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+		<Filter Name="arrayStru">
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\ARR.F90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\ARR_ACCESS.F90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\ARR_TYPE.F90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\CLASS.F90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\ENUM.F90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\TYPE.F90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.7.res\TYPE_ACCESS.F90"/></Filter>
+		<Filter Name="functionSub">
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\Func.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\func_name_arg.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\optional.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\passtype.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\passtype_degree.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\recursive.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\recursive_do.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.8.res\WriteMatrix.f90"/></Filter>
+		<Filter Name="module9">
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.9.res\interface.f90"/>
+		<File RelativePath=".\isTest.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.9.res\module.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.9.res\module_oper.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.9.res\module_protect.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.9.res\module_view.f90"/></Filter>
+		<Filter Name="TestNameList">
+		<File RelativePath=".\usenamelist.f90"/></Filter>
+		<Filter Name="process">
+		<Filter Name="IF">
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.6.res\Demo_IF\func.f90"/>
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.6.res\Demo_IF\main.f90"/></Filter>
+		<Filter Name="Tyep">
+		<File RelativePath="..\..\..\BaiduYunDownload\code\Ses.6.res\Demo_Type\main.f90"/></Filter></Filter>
+		<File RelativePath=".\Console1.f90"/>
+		<File RelativePath=".\Source1.f90"/></Filter>
+		<File RelativePath=".\ReadMe.txt"/></Files>
+	<Globals/></VisualStudioProject>
