@@ -51,6 +51,8 @@
 		<File RelativePath=".\Ses.9.res\module_oper.f90"/>
 		<File RelativePath=".\Ses.9.res\module_protect.f90"/>
 		<File RelativePath=".\Ses.9.res\module_view.f90"/></Filter>
+		<Filter Name="gust">
+		<File RelativePath=".\gust\gust.f90"/></Filter>
 		<Filter Name="process">
 		<Filter Name="IF">
 		<File RelativePath=".\Ses.6.res\Demo_IF\func.f90"/>

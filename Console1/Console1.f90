@@ -20,6 +20,7 @@
     use SecMod
     use Grid_Mod
     use key_func
+    use GUST
     implicit none
 
     INTEGER :: i
@@ -179,5 +180,9 @@
         
     END DO
 
+    !!**************************************
+    !* 开始测试阵风模块
+    !!***************************************
+    call generateGust()
     end program Console1
 
