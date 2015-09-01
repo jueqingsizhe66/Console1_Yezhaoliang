@@ -22,6 +22,7 @@
     use key_func
     use GUST
     use fmatlab
+    use MyReadModule
     implicit none
 
     INTEGER :: i
@@ -55,6 +56,12 @@
     CHARACTER (LEN=:), ALLOCATABLE :: keywd
     REAL, ALLOCATABLE :: pars(:)
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+    !!**************************************
+    !* MyReadModule
+    !!*************************************** 
+    integer :: n
+    integer, allocatable   :: arrayMy(:)
     ! Variables
 
     ! Body of Console1
@@ -170,7 +177,8 @@
             WRITE (*,*) 'Keyword unknown...'
             CYCLE
         END IF
-            
+        ! 上面是安全检查过程  下面是单独的针对合法的
+        ! keyword处理程序  当然也可以放在上面！
         IF (keywd=='cir') THEN
             WRITE (*, *) 'Area = ', pi*pars(1)**2.
         ELSE IF (keywd=='sqr') THEN
@@ -190,6 +198,13 @@
     !!**************************************
     !* 开始测试 fortran产生数据 调用matlab进行绘图
     !!*************************************** 
-    call generateDataForMatlab()
+    !call generateDataForMatlab()
+    
+    !!**************************************
+    !* 开始测试 MyReadModule
+    !!***************************************
+    call readFile(n,arrayMy)
+    write(*,*) (arrayMy(i),i=1,n)
+    
     end program Console1
 

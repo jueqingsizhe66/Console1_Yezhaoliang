@@ -2,7 +2,7 @@ clear all; close all; clc;
 M=load('fortranmatlab/matrixM.txt');
 eigvalues=eig(M);
 plot(real(eigvalues),imag(eigvalues),'-r*');
-title('çŸ©é˜µMçš„ç‰¹å¾å€¼');
-xlabel('ç‰¹å¾å€¼å®æ•°éƒ¨åˆ†');
-ylabel('ç‰¹å¾å€¼è™šæ•°éƒ¨åˆ†');
+title('¾ØÕó»æÍ¼');
+xlabel('ĞéÊı²¿·Ö');
+ylabel('ÊµÊı²¿·Ö');
 

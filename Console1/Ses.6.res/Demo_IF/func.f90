@@ -11,7 +11,7 @@ CONTAINS
         REAL, ALLOCATABLE, INTENT (INOUT) :: pars(:)
         CHARACTER (LEN=80) :: cmdline, kwt
         INTEGER :: npars
-
+        WRITE(*,*) '请输入cir [3..]|sqr [3..] |rect [3] [5] |end '
         READ (*, '(a80)') cmdline
         READ (cmdline, *) kwt
         IF (ALLOCATED(keyword)) DEALLOCATE(keyword)
@@ -38,7 +38,7 @@ CONTAINS
         ALLOCATE (CHARACTER(LEN=len_trim(adjustl(cmdline))) :: ctmp)
         ctmp = trim(adjustl(cmdline))
         DO
-            IF (ctmp(i:i)/=' ') THEN
+            IF (ctmp(i:i)/=' ') THEN !! 以空格作为分割标准 逐个读取各个字符串 最终获得总共的字段数
                 i = i + 1
             ELSE
                 npars = npars + 1

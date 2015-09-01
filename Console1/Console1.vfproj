@@ -46,7 +46,7 @@
 		<File RelativePath=".\Ses.8.res\WriteMatrix.f90"/></Filter>
 		<Filter Name="module9">
 		<File RelativePath=".\Ses.9.res\interface.f90"/>
-		<File RelativePath=".\isTest.f90"/>
+		<File RelativePath=".\Ses.9.res\isTest.f90"/>
 		<File RelativePath=".\Ses.9.res\module.f90"/>
 		<File RelativePath=".\Ses.9.res\module_oper.f90"/>
 		<File RelativePath=".\Ses.9.res\module_protect.f90"/>
@@ -55,6 +55,8 @@
 		<File RelativePath=".\gust\gust.f90"/></Filter>
 		<Filter Name="fortranWmatlab">
 		<File RelativePath=".\fortranmatlab\fortran-with-matlab.f90"/></Filter>
+		<Filter Name="fcode.cn">
+		<File RelativePath=".\fcode.cn\MyReadModule.f90"/></Filter>
 		<Filter Name="process">
 		<Filter Name="IF">
 		<File RelativePath=".\Ses.6.res\Demo_IF\func.f90"/>
@@ -62,7 +64,7 @@
 		<Filter Name="Tyep">
 		<File RelativePath=".\Ses.6.res\Demo_Type\main.f90"/></Filter></Filter>
 		<Filter Name="TestNameList">
-		<File RelativePath=".\usenamelist.f90"/></Filter>
+		<File RelativePath=".\TestNameList\usenamelist.f90"/></Filter>
 		<File RelativePath=".\Console1.f90"/>
 		<File RelativePath=".\Source1.f90"/></Filter>
 		<File RelativePath=".\ReadMe.txt"/></Files>

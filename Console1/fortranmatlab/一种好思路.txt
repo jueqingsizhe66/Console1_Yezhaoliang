@@ -1,0 +1,26 @@
+MATLAB_2009
+     mcc -m test.m  生成test.exe
+
+安装MRC
+     
+！FORTRAN代码
+program main
+implicit none
+
+integer,parameter :: rows=100, cols=100
+real*8 :: M(rows,cols)
+integer :: i
+
+call random_seed()
+call random_number(M)
+
+open(100,file='matrix M.txt')
+
+write(100,'(<cols>E25.15)') transpose(M)
+
+close(100)
+
+call system("test.exe") 
+
+end program main
+生成FORTRAN_TEST.EXE

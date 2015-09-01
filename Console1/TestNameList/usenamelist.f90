@@ -10,7 +10,7 @@ module usenamelist
     !读取NML文件
     subroutine callNameList()
     implicit none
-    Character(len=15),parameter:: filename="In.txt" !!!不加parameter编译不通过 字符串常量
+    Character(len=30),parameter:: filename=trim('TestNameList/In.txt') !!!不加parameter编译不通过 字符串常量
     
     open(32,FILE=filename)
     ! 读取windTurbine数据块
@@ -25,7 +25,7 @@ module usenamelist
     !!! 把NML数据 写入文件
     subroutine IntoNameList()
     implicit none
-    Character(len=15),parameter:: filename="Out.txt" !!!不加parameter编译不通过 字符串常量
+    Character(len=30),parameter:: filename='TestNameList/Out.txt' !!!不加parameter编译不通过 字符串常量
     
     winBlade=10
     Num=30
