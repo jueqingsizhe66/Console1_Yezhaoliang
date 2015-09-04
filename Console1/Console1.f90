@@ -23,6 +23,9 @@
     use GUST
     use fmatlab
     use MyReadModule
+    use FFT_Mod
+    use John_Complex
+    use JohnTimeStamp  ! 把timestamp()上升到所有模块都可以使用
     implicit none
 
     INTEGER :: i
@@ -48,7 +51,7 @@
     !* Grid_Mod
     !!***************************************
     logical :: bGrid
-    
+
     !!**************************************
     !* func
     !!***************************************
@@ -56,12 +59,22 @@
     CHARACTER (LEN=:), ALLOCATABLE :: keywd
     REAL, ALLOCATABLE :: pars(:)
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
+
     !!**************************************
     !* MyReadModule
-    !!*************************************** 
+    !!***************************************
     integer :: n
     integer, allocatable   :: arrayMy(:)
+
+    !!**************************************
+    !* 开始测试FFT_Mod
+    !* 引入了DP 和x变量
+    !!***************************************
+    integer,parameter :: FFT_ModN=8
+    complex(KIND= FFT_ModDP) :: FFT_MODx(FFT_ModN) =[36.d0,21.d0,33.d0,44.d0,55.d0,63.d0,73.d0,38.d0],FFT_ModOriginal(FFT_ModN)
+    complex(KIND=FFT_ModDP) :: temp
+    !!!complex 数据类型的定义
+
     ! Variables
 
     ! Body of Console1
@@ -150,7 +163,7 @@
         write( * , '(999f6.2)' ) grd_rData( : , i )
     End Do
     bGrid = Grid_Dealloc()
-    
+
     !!**************************************
     !* 开始测试 func模块
     !!***************************************
@@ -160,7 +173,7 @@
         ! sqr 10.
         ! rect 1. 2.
         CALL readcmd(keywd, pars)
-        
+
         IF (keywd=='end') THEN
             EXIT
         ELSE IF (keywd=='cir' .OR. keywd=='sqr') THEN
@@ -186,25 +199,80 @@
         ELSE IF (keywd=='rect') THEN
             WRITE (*, *) 'Area = ', pars(1)*pars(2)
         END IF
-        
+
     END DO
 
     !!**************************************
     !* 开始测试阵风模块
     !!***************************************
     call generateGust()
-    
-    
+
+
     !!**************************************
     !* 开始测试 fortran产生数据 调用matlab进行绘图
-    !!*************************************** 
+    !!***************************************
     !call generateDataForMatlab()
-    
+
     !!**************************************
     !* 开始测试 MyReadModule
     !!***************************************
     call readFile(n,arrayMy)
     write(*,*) (arrayMy(i),i=1,n)
-    
+
+    !!**************************************
+    !* 开始测试FFT_MOD
+    !!***************************************
+    write(*,*) 'Original Input Data'
+    Do i = 1 , FFT_ModN
+        Write (*, *) FFT_MODx(i)
+    End Do
+    FFT_ModOriginal =FFT_MODx  !赋值 保留原始值
+    ! 经过正向FFT
+    Call fcFFT( FFT_MODx , FFT_Forward )
+    Write(*,*) 'FFT_Forward:'
+    Do i = 1 , FFT_ModN
+        Write (*, *) FFT_MODx(i)
+    End Do
+
+    Write(*,*) 'FFT_Backward:'
+    Call fcFFT(  FFT_MODx , FFT_Inverse )
+    Do i = 1 , FFT_ModN
+        temp =FFT_MODx(i)/FFT_ModN
+        Write (*, *)  temp,'-->',(abs(FFT_ModOriginal(i))-abs(temp))/abs(FFT_ModOriginal(i))!,'%'
+    End Do
+
+    write(*,*) '暂停一小会 空格继续'
+    read(*,*)
+   ! call system("pause")  !加进去有问题
+    !!**************************************
+    !* 开始测试JohnComplex模块
+    !!***************************************
+    call timestamp ( )
+    write ( *, '(a)' ) ' '
+    write ( *, '(a)' ) 'COMPLEX_NUMBERS:'
+    write ( *, '(a)' ) '  FORTRAN90 version.'
+    write ( *, '(a)' ) '  Demonstrate complex number usage.'
+    !
+    !  Single precision complex.
+    !
+    call test01 ( )
+    call test02 ( )
+    call test03 ( )
+    !
+    !  Double precision complex.
+    !
+    call test04 ( )
+    call test05 ( )
+    call test06 ( )
+    !
+    !  Terminate.
+    !
+    write ( *, '(a)' ) ' '
+    write ( *, '(a)' ) 'COMPLEX_NUMBERS:'
+    write ( *, '(a)' ) '  Normal end of execution.'
+
+    write ( *, '(a)' ) ' '
+    call timestamp ( )
+
     end program Console1
 
