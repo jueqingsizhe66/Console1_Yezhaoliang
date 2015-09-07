@@ -37,6 +37,10 @@
 		<File RelativePath=".\Ses.7.res\TYPE_ACCESS.F90"/></Filter>
 		<Filter Name="fcode.cn">
 		<File RelativePath=".\fcode.cn\MyReadModule.f90"/></Filter>
+		<Filter Name="FFT">
+		<File RelativePath=".\FFT\complex.f90"/>
+		<File RelativePath=".\FFT\FFT_MOD.f90"/>
+		<File RelativePath=".\TimeStamp.f90"/></Filter>
 		<Filter Name="fortranWmatlab">
 		<File RelativePath=".\fortranmatlab\fortran-with-matlab.f90"/></Filter>
 		<Filter Name="functionSub">
@@ -48,6 +52,10 @@
 		<File RelativePath=".\Ses.8.res\recursive.f90"/>
 		<File RelativePath=".\Ses.8.res\recursive_do.f90"/>
 		<File RelativePath=".\Ses.8.res\WriteMatrix.f90"/></Filter>
+		<Filter Name="Geometry">
+		<Filter Name="f90split">
+		<File RelativePath=".\geometry\f90split\f90split.f90"/>
+		<File RelativePath=".\geometry\geometry.f90"/></Filter></Filter>
 		<Filter Name="gust">
 		<File RelativePath=".\gust\gust.f90"/></Filter>
 		<Filter Name="module9">
@@ -57,10 +65,8 @@
 		<File RelativePath=".\Ses.9.res\module_oper.f90"/>
 		<File RelativePath=".\Ses.9.res\module_protect.f90"/>
 		<File RelativePath=".\Ses.9.res\module_view.f90"/></Filter>
-		<Filter Name="FFT">
-		<File RelativePath=".\FFT\complex.f90"/>
-		<File RelativePath=".\FFT\FFT_MOD.f90"/>
-		<File RelativePath=".\TimeStamp.f90"/></Filter>
+		<Filter Name="linear">
+		<File RelativePath=".\linearStabilty\linear.f90"/></Filter>
 		<Filter Name="process">
 		<Filter Name="IF">
 		<File RelativePath=".\Ses.6.res\Demo_IF\func.f90"/>

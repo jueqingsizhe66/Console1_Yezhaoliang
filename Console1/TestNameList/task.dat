@@ -1,0 +1,19 @@
+!- input template
+&TOPTASK
+task='wfpoweruq'
+&END
+
+&COMPUNIT
+&END
+
+&UQTASK
+&END
+
+&FILES
+contour_prefix='contour',
+cdf_in='samples.dat'
+&END
+
+&WINDFARMUQ
+ifanguq=.true.
+&END
