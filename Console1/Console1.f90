@@ -29,6 +29,7 @@
     use f90split
     use geometry
     use linearStability
+    use DFile_Mod
     implicit none
 
     INTEGER :: i
@@ -78,6 +79,11 @@
     complex(KIND=FFT_ModDP) :: temp
     !!!complex 数据类型的定义
 
+    !!**************************************
+    !* DFile_Mod 变量定义
+    !!*************************************** 
+    Character(len=512) :: cLine
+    integer :: nRow, nCol
     ! Variables
 
     ! Body of Console1
@@ -318,12 +324,27 @@
     !!**************************************
     !* Test LinearStability
     !!*************************************** 
-    call GetCircle()
-    call getEuler()
-    call getPCC()
-    call getPC2B()
-    call getPC3B()
-    call getPC_Zhou()
+    !call GetCircle()
+    !call getEuler()
+    !call getPCC()
+    !call getPC2B()
+    !call getPC3B()
+    !call getPC_Zhou()
+    
+    !!**************************************
+    !*  测试DFile_Mod
+    !!*************************************** 
+    
+  Open( 53 , File = './module9/in.txt' )
+  nRow = GetFileN( 53 )
+  write( * , * ) '文件共',nRow,'行！'
+  Do i = 1 , nRow
+    read( 53 , '(a512)' ) cLine
+    nCol = GetDataN( cLine )
+    !nCol = f_numbervars( cLine )
+    write( * , * ) i,'行有',nCol,'个数据'
+  End Do
+  Close( 53 )
    
     end program Console1
 

@@ -27,7 +27,7 @@
 		<Filter Name="Header Files" Filter="fi;fd"/>
 		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
 		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
-		<Filter Name="arrayStru">
+		<Filter Name="Ses.7.res">
 		<File RelativePath=".\Ses.7.res\ARR.F90"/>
 		<File RelativePath=".\Ses.7.res\ARR_ACCESS.F90"/>
 		<File RelativePath=".\Ses.7.res\ARR_TYPE.F90"/>
@@ -40,10 +40,10 @@
 		<Filter Name="FFT">
 		<File RelativePath=".\FFT\complex.f90"/>
 		<File RelativePath=".\FFT\FFT_MOD.f90"/>
-		<File RelativePath=".\TimeStamp.f90"/></Filter>
+		<File RelativePath=".\FFT\TimeStamp.f90"/></Filter>
 		<Filter Name="fortranWmatlab">
 		<File RelativePath=".\fortranmatlab\fortran-with-matlab.f90"/></Filter>
-		<Filter Name="functionSub">
+		<Filter Name="Ses.8.rs">
 		<File RelativePath=".\Ses.8.res\func_name_arg.f90"/>
 		<File RelativePath=".\Ses.8.res\FuncPrint.f90"/>
 		<File RelativePath=".\Ses.8.res\optional.f90"/>
@@ -58,16 +58,18 @@
 		<File RelativePath=".\geometry\geometry.f90"/></Filter></Filter>
 		<Filter Name="gust">
 		<File RelativePath=".\gust\gust.f90"/></Filter>
-		<Filter Name="module9">
-		<File RelativePath=".\Ses.9.res\interface.f90"/>
-		<File RelativePath=".\Ses.9.res\isTest.f90"/>
-		<File RelativePath=".\Ses.9.res\module.f90"/>
-		<File RelativePath=".\Ses.9.res\module_oper.f90"/>
-		<File RelativePath=".\Ses.9.res\module_protect.f90"/>
-		<File RelativePath=".\Ses.9.res\module_view.f90"/></Filter>
-		<Filter Name="linear">
+		<Filter Name="linearStability">
 		<File RelativePath=".\linearStabilty\linear.f90"/></Filter>
-		<Filter Name="process">
+		<Filter Name="module9">
+		<File RelativePath=".\FileMod.f90"/>
+		<File RelativePath=".\in.txt"/>
+		<File RelativePath=".\module9\interface.f90"/>
+		<File RelativePath=".\module9\isTest.f90"/>
+		<File RelativePath=".\module9\module.f90"/>
+		<File RelativePath=".\module9\module_oper.f90"/>
+		<File RelativePath=".\module9\module_protect.f90"/>
+		<File RelativePath=".\module9\module_view.f90"/></Filter>
+		<Filter Name="Ses.6.res">
 		<Filter Name="IF">
 		<File RelativePath=".\Ses.6.res\Demo_IF\func.f90"/>
 		<File RelativePath=".\Ses.6.res\Demo_IF\main.f90"/></Filter>

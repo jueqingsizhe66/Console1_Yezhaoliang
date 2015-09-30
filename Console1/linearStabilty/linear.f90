@@ -52,7 +52,7 @@
     INTEGER :: I,N
     real :: X
     integer ,parameter :: unit1=50
-    character(len=25),parameter ::  filename="Circle.DAT"
+    character(len=25),parameter ::  filename="./linearStabilty/Circle.DAT"
 
     OPEN(unit1,FILE =filename)
 
@@ -86,7 +86,7 @@
     INTEGER :: I,N
     real :: X
     integer ,parameter :: unit1=51
-    character(len=25),parameter ::  filename="Euler.DAT"
+    character(len=25),parameter ::  filename="./linearStabilty/Euler.DAT"
 
     OPEN(unit1,FILE =filename)
 
@@ -121,7 +121,7 @@
     INTEGER :: I,N
     real :: X
     integer ,parameter :: unit1=52
-    character(len=25),parameter ::  filename="PCC.DAT"
+    character(len=25),parameter ::  filename="./linearStabilty/PCC.DAT"
     OPEN(unit1,FILE =filename)
 
     ! 存储 Func00 的值    e^(i*theta) =cos(theta)+i*sin(theta)
@@ -158,7 +158,7 @@
 
     INTEGER :: I,N
     integer ,parameter :: unit1=58
-    character(len=25),parameter ::  filename="PC2B.DAT"
+    character(len=25),parameter ::  filename="./linearStabilty/PC2B.DAT"
     !!!getPC2B
     !!  开始获得 三次方特征根的值！  A=(3-2*deltaX)   deltaX=CMPLX(0,X)
     open(unit1,FILE=filename)
@@ -208,7 +208,7 @@
 
     INTEGER :: I,N
     integer ,parameter :: unit1=58
-    character(len=25),parameter ::  filename="PC3B.DAT"
+    character(len=25),parameter ::  filename="./linearStabilty/PC3B.DAT"
     !!!getPC2B
     !!  开始获得 三次方特征根的值！  A=(3-2*deltaX)   deltaX=CMPLX(0,X)
     open(unit1,FILE=filename)
@@ -257,7 +257,7 @@
 
     INTEGER :: I,N
     integer ,parameter :: unit1=58
-    character(len=25),parameter ::  filename="Zhou.DAT"
+    character(len=25),parameter ::  filename="./linearStabilty/Zhou.DAT"
     !!!getPC2B
     !!  开始获得 三次方特征根的值！  A=(3-2*deltaX)   deltaX=CMPLX(0,X)
     open(unit1,FILE=filename)
